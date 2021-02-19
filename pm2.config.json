@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "rr-nn-nuxtjs",
+            "script": "npm",
+            "args": "start"
+        }
+    ]
+}

@@ -6,38 +6,46 @@
       {
         "name": "/",
         "path": "",
-        "component": "/Users/gaoshuang/notes-lagou/rr-nn-nuxtjs/pages/home"
+        "component": "/Users/gaoshuang/notes-lagou/rr-nn-nuxtjs/pages/home",
+        "_name": "_8e04d86c"
       },
       {
         "name": "login",
         "path": "/login",
-        "component": "/Users/gaoshuang/notes-lagou/rr-nn-nuxtjs/pages/login"
+        "component": "/Users/gaoshuang/notes-lagou/rr-nn-nuxtjs/pages/login",
+        "_name": "_66ed2dde"
       },
       {
         "name": "register",
         "path": "/register",
-        "component": "/Users/gaoshuang/notes-lagou/rr-nn-nuxtjs/pages/login"
+        "component": "/Users/gaoshuang/notes-lagou/rr-nn-nuxtjs/pages/login",
+        "_name": "_66ed2dde"
       },
       {
         "name": "profile",
         "path": "/profile/:username",
-        "component": "/Users/gaoshuang/notes-lagou/rr-nn-nuxtjs/pages/profile"
+        "component": "/Users/gaoshuang/notes-lagou/rr-nn-nuxtjs/pages/profile",
+        "_name": "_397ffede"
       },
       {
         "name": "settings",
         "path": "/settings",
-        "component": "/Users/gaoshuang/notes-lagou/rr-nn-nuxtjs/pages/settings"
+        "component": "/Users/gaoshuang/notes-lagou/rr-nn-nuxtjs/pages/settings",
+        "_name": "_f08024e4"
       },
       {
         "name": "editor",
         "path": "/editor",
-        "component": "/Users/gaoshuang/notes-lagou/rr-nn-nuxtjs/pages/editor"
+        "component": "/Users/gaoshuang/notes-lagou/rr-nn-nuxtjs/pages/editor",
+        "_name": "_6a2cb198"
       },
       {
         "name": "article",
         "path": "/article/:slug",
-        "component": "/Users/gaoshuang/notes-lagou/rr-nn-nuxtjs/pages/article"
+        "component": "/Users/gaoshuang/notes-lagou/rr-nn-nuxtjs/pages/article",
+        "_name": "_204a422b"
       }
-    ]
+    ],
+    "_name": "_75fb8b55"
   }
 ]

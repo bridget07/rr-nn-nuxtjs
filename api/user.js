@@ -15,3 +15,32 @@ export const register = data => {
         data
     })
 }
+
+export const followUser = (username) => {
+    return request({
+      method: 'POST',
+      url: `/api/profiles/${username}/follow`,
+    })
+}
+  
+export const unfollowUser = (username) => {
+    return request({
+        method: 'DELETE',
+        url: `/api/profiles/${username}/follow`,
+        data
+    })
+}
+export const getCurrentUser = () => {
+    return request({
+      method: 'GET',
+      url: '/api/user'
+    })
+  }
+  
+export const updateCurrentUser = (data) => {
+    return request({
+        method: 'PUT',
+        url: '/api/user',
+        data
+    })
+}

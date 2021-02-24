@@ -35,12 +35,19 @@ export const getCurrentUser = () => {
       method: 'GET',
       url: '/api/user'
     })
-  }
+}
   
 export const updateCurrentUser = (data) => {
     return request({
         method: 'PUT',
         url: '/api/user',
         data
+    })
+}
+
+export const getProfile = (username) => {
+    return request({
+        method: 'GET',
+        url: `/api/profiles/${username}`
     })
 }

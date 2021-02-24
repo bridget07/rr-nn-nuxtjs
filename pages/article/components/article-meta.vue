@@ -68,10 +68,10 @@
 
 <script>
 import { followUser, unfollowUser } from '@/api/user'
-import { delArticle } from '@/api/article'
 import {
 		  deleteFavorite,
-		  addFavorite,
+      addFavorite,
+      delArticle
 	 } from "@/api/article";
 import { mapState } from "vuex";
 

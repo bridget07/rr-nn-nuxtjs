@@ -94,12 +94,13 @@ const addComment = data => {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return login; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return register; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return login; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return register; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return followUser; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return unfollowUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return unfollowUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getCurrentUser; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return updateCurrentUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return updateCurrentUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getProfile; });
 /* harmony import */ var _plugins_request__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 
 const login = data => {
@@ -142,6 +143,12 @@ const updateCurrentUser = data => {
     data
   });
 };
+const getProfile = username => {
+  return Object(_plugins_request__WEBPACK_IMPORTED_MODULE_0__[/* request */ "b"])({
+    method: 'GET',
+    url: `/api/profiles/${username}`
+  });
+};
 
 /***/ }),
 
@@ -166,8 +173,8 @@ var api_article = __webpack_require__(28);
 var external_markdown_it_ = __webpack_require__(27);
 var external_markdown_it_default = /*#__PURE__*/__webpack_require__.n(external_markdown_it_);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/article/components/article-meta.vue?vue&type=template&id=6470e4a2&
-var article_metavue_type_template_id_6470e4a2_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"article-meta"},[_c('nuxt-link',{attrs:{"to":{
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/article/components/article-meta.vue?vue&type=template&id=0ccda318&
+var article_metavue_type_template_id_0ccda318_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"article-meta"},[_c('nuxt-link',{attrs:{"to":{
     name: 'profile',
     params: {
       username: _vm.article.author.username
@@ -187,10 +194,10 @@ var article_metavue_type_template_id_6470e4a2_render = function () {var _vm=this
       }))+"><i class=\"ion-plus-round\"></i>"+_vm._ssrEscape("\n       \n      "+_vm._s(_vm.article.author.following ? "unFollow" : "Follow")+" "+_vm._s(_vm.article.author.username)+"\n    ")+"</button>\n      \n    <button"+(_vm._ssrAttr("disabled",_vm.favoriteDisabled))+(_vm._ssrClass("btn btn-sm btn-outline-primary",{
         active: _vm.article.favorited
       }))+"><i class=\"ion-heart\"></i>\n       \n      Favorite Post <span class=\"counter\">"+_vm._ssrEscape("("+_vm._s(_vm.article.favoritesCount)+")")+"</span></button>")],2)}
-var article_metavue_type_template_id_6470e4a2_staticRenderFns = []
+var article_metavue_type_template_id_0ccda318_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./pages/article/components/article-meta.vue?vue&type=template&id=6470e4a2&
+// CONCATENATED MODULE: ./pages/article/components/article-meta.vue?vue&type=template&id=0ccda318&
 
 // EXTERNAL MODULE: ./api/user.js
 var user = __webpack_require__(29);
@@ -270,7 +277,6 @@ var external_vuex_ = __webpack_require__(3);
 
 
 
-
 /* harmony default export */ var article_metavue_type_script_lang_js_ = ({
   name: 'ArticleMeta',
   props: {
@@ -300,7 +306,7 @@ var external_vuex_ = __webpack_require__(3);
 
     async onFollow(author) {
       this.followDisabled = true;
-      const optUser = author.following ? user["e" /* unfollowUser */] : user["a" /* followUser */];
+      const optUser = author.following ? user["f" /* unfollowUser */] : user["a" /* followUser */];
       await optUser(author.username);
       author.following = !author.following;
       this.followDisabled = false;
@@ -342,8 +348,8 @@ function injectStyles (context) {
 
 var component = Object(componentNormalizer["a" /* default */])(
   components_article_metavue_type_script_lang_js_,
-  article_metavue_type_template_id_6470e4a2_render,
-  article_metavue_type_template_id_6470e4a2_staticRenderFns,
+  article_metavue_type_template_id_0ccda318_render,
+  article_metavue_type_template_id_0ccda318_staticRenderFns,
   false,
   injectStyles,
   null,
